@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "fastapi-async-db"
+version = "0.1.0"
+description = ""
+authors = ["Ben <ben@ahnlab.io>"]
+readme = "README.md"
+packages = [{include = "fastapi_async_db"}]
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+fastapi = {extras = ["all"], version = "^0.95.1"}
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.12"}
+aiosqlite = "^0.19.0"
+pydantic = "^1.10.7"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+flake8 = "^6.0.0"
+mypy = "^1.2.0"
+pylint = "^2.17.4"
+black = "^23.3.0"
+pytest-asyncio = "^0.21.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
